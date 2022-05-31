@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Library</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
@@ -20,7 +20,9 @@
 <body>
     <nav class="mx-5 my-5 navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+        <a class="navbar-brand" >
+            <img src="{{ asset('img/logo.jpg') }}">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +52,7 @@
             <p>Anda dapat mencari seluruh koleksi yang tersedia di perpustakaan kami</p>
         </div>
         <div class="col">
-            <h1>GAMBAR</h1>
+        <img src="{{ asset('img/reading.jpg') }}">
         </div>
     </div>
 

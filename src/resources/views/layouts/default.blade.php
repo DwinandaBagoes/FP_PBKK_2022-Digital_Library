@@ -21,7 +21,7 @@
     <nav class="mx-5 my-5 navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid">
         <a class="navbar-brand" >
-            <img src="{{ asset('img/logo.jpg') }}">
+            <img src="{{ asset('img/logo.png') }}"  width="100" height="100">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
@@ -50,23 +50,24 @@
             <h4>Selamat Datang di</h4>
             <h1 class="text-info">Digital Library</h1>
             <p>Anda dapat mencari seluruh koleksi yang tersedia di perpustakaan kami</p>
+            <div class="d-flex">
+                <div class="p-2">
+                    <form class="d-flex">
+                            <button class="btn btn-info" type="button">Cari Buku</button>
+                    </form>
+                </div>
+                <div class="p-2">
+                    <form class="d-flex">
+                            <button class="btn btn-light" type="button">Daftar</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="col">
-        <img src="{{ asset('img/reading.jpg') }}">
+        <img src="{{ asset('img/reading.png') }}"  width="500" height="500">
         </div>
     </div>
 
-    <div class="d-flex" id="content">
-        <div class="p-2">
-            <form class="d-flex">
-                    <button class="btn btn-info" type="button">Cari Buku</button>
-            </form>
-        </div>
-        <div class="p-2">
-            <form class="d-flex">
-                    <button class="btn btn-light" type="button">Daftar</button>
-            </form>
-        </div>
-    </div>
+    
 </body>
 </html>

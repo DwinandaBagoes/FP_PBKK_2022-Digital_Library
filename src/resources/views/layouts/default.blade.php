@@ -21,7 +21,7 @@
     <nav class="mx-5 my-5 navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid">
         <a class="navbar-brand" >
-            <img src="{{ asset('img/logo.png') }}"  width="100" height="100">
+            <img src="{{ asset('img/logo-new.png') }}"  width="280" height="100">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="col">
-        <img src="{{ asset('img/reading.png') }}"  width="500" height="500">
+        <img src="{{ asset('img/reading.jpg') }}"  width="500" height="349">
         </div>
     </div>
 

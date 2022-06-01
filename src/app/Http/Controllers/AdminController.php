@@ -19,6 +19,6 @@ class AdminController extends Controller
      */
     public function admin()
     {
-        return view('page.admin');
+        return view('admin.beranda');
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.welcome')
 
 @section('page-content')
     Home Page

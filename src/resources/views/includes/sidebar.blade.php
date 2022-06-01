@@ -19,7 +19,7 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link" href="#">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
               Beranda
             </a>

@@ -51,39 +51,26 @@
               <label for="judul">Judul Buku</label>
             </div>
             <div class="mb-3">
-              <label for="foto" class="form-label">Pas foto</label>
-              <input class="form-control" type="file" name="foto" id="foto" accept=".png, .jpg, .jpeg">
+              <label for="sampul" class="form-label">Foto Sampul</label>
+              <input class="form-control" type="file" name="sampul" id="sampul" accept=".png, .jpg, .jpeg">
               <img src="" style="max-height: 100px; width: auto" id="previewImg">
             </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label for="jenis_kelamin">Jenis Kelamin</label>
-                <select class="form-select form-floating mb-3" name="jenis_kelamin" id="jenis_kelamin" required>
-                  <option label="Pilih jenis kelamin" hidden></option>
-                  <option value="L">Laki-Laki</option>
-                  <option value="P">Perempuan</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="agama">Agama</label>
-                <select class="form-select form-floating mb-3" name="agama" id="agama" required>
-                  <option label="Pilih agama" hidden></option>
-                  <option value="Islam">Islam</option>
-                  <option value="Kristen">Kristen</option>
-                  <option value="Katolik">Katolik</option>
-                  <option value="Hindu">Hindu</option>
-                  <option value="Buddha">Buddha</option>
-                  <option value="Khonghucu">Khonghucu</option>
-                </select>
-              </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="pengarang" id="pengarang" placeholder="Pengarang" required>
+              <label for="pengarang">Pengarang</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="sekolah_asal" id="sekolah_asal" placeholder="Sekolah asal Anda" required>
-              <label for="sekolah_asal">Sekolah Asal</label>
+              <input type="text" class="form-control" name="penerbit" id="penerbit" placeholder="Penerbit" required>
+              <label for="penerbit">Penerbit</label>
             </div>
             <div class="form-floating mb-3">
-              <textarea class="form-control" placeholder="Alamat Anda" name="alamat" id="alamat" style="height: 100px" required></textarea>
-              <label for="alamat">Alamat</label>
+              <input type="text" class="form-control" name="tahun_terbit" id="tahun_terbit" placeholder="Tahun Terbit" required>
+              <label for="tahun_terbit">Tahun Terbit</label>
+            </div>
+            <div class="mb-3">
+              <label for="file" class="form-label">File</label>
+              <input class="form-control" type="file" name="file" id="file" accept=".pdf">
+              <img src="" style="max-height: 100px; width: auto" id="previewImg">
             </div>
           </div>
           <div class="modal-footer">
@@ -94,5 +81,5 @@
       </div>
     </div>
   </div>
-    </main>
+</main>
 @endsection

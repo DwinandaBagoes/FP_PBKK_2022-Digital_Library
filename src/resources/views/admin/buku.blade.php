@@ -4,149 +4,95 @@
 
 @section('content')
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Buku</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+  <div class="pt-3 pb-2 mb-3 container">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="row mb-3 border-bottom">
+              <div class="col-sm-6">
+                <h1 class="h2">Buku</h1>
+              </div>
+              <div class="col-sm-6 float-end">
+                <a href="daftar.html" class="btn btn-primary mb-2 float-end">Tambah baru</a>
+              </div>
+            </div>
+ 
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Judul Buku</th>
+                  <th scope="col">Foto Sampul</th>
+                  <th scope="col">Pengarang</th>
+                  <th scope="col">Penerbit</th>
+                  <th scope="col">Tahun Terbit</th>
+                  <th scope="col">File</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="listSiswa">
+                 
+              </tbody>
+            </table>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            This week
-          </button>
+      </div>
+  </div>
+ 
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Data Buku</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <form id="form-edit">
+          <div class="modal-body">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="judul" id="judul" placeholder="Judul Buku" required>
+              <label for="judul">Judul Buku</label>
+            </div>
+            <div class="mb-3">
+              <label for="foto" class="form-label">Pas foto</label>
+              <input class="form-control" type="file" name="foto" id="foto" accept=".png, .jpg, .jpeg">
+              <img src="" style="max-height: 100px; width: auto" id="previewImg">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="jenis_kelamin">Jenis Kelamin</label>
+                <select class="form-select form-floating mb-3" name="jenis_kelamin" id="jenis_kelamin" required>
+                  <option label="Pilih jenis kelamin" hidden></option>
+                  <option value="L">Laki-Laki</option>
+                  <option value="P">Perempuan</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="agama">Agama</label>
+                <select class="form-select form-floating mb-3" name="agama" id="agama" required>
+                  <option label="Pilih agama" hidden></option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Katolik">Katolik</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Buddha">Buddha</option>
+                  <option value="Khonghucu">Khonghucu</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="sekolah_asal" id="sekolah_asal" placeholder="Sekolah asal Anda" required>
+              <label for="sekolah_asal">Sekolah Asal</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Alamat Anda" name="alamat" id="alamat" style="height: 100px" required></textarea>
+              <label for="alamat">Alamat</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-primary" id="edit-btn">Simpan</button>
+          </div>
+        </form>
       </div>
-
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-      <h2>Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,004</td>
-              <td>text</td>
-              <td>random</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,005</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>placeholder</td>
-            </tr>
-            <tr>
-              <td>1,006</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,007</td>
-              <td>placeholder</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>irrelevant</td>
-            </tr>
-            <tr>
-              <td>1,008</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,009</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,010</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,013</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>visual</td>
-            </tr>
-            <tr>
-              <td>1,014</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,015</td>
-              <td>random</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>text</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </div>
+  </div>
     </main>
 @endsection

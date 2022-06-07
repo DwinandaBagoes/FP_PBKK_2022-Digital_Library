@@ -156,7 +156,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#{{ route('peminjaman') }}">
+            <a class="nav-link" href="{{ route('peminjaman') }}">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
               Peminjaman
             </a>

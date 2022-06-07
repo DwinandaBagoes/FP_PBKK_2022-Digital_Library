@@ -44,6 +44,11 @@
                     <button>Hapus</button>
                   </td>
                 </tr>
+                @empty
+                <tr>
+                  <td><b><i>Data tidak ada</i></b></td>
+                </tr>
+                @endforelse
               </tbody>
             </table>
           </div>

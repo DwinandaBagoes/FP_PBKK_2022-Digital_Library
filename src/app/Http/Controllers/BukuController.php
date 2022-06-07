@@ -22,5 +22,6 @@ class BukuController extends Controller
     {
         $buku = Buku::latest()->get();
         return view('admin.buku', compact('buku'));
+        // return view('admin.buku');
     }
 }

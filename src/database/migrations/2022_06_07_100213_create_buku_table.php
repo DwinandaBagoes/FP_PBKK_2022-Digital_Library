@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('pengarang', 50);
             $table->string('penerbit', 50);
             $table->string('fileBuku', 100);
-            $table->int('tahunTerbit');
+            $table->integer('tahunTerbit');
             $table->timestamps();
         });
     }

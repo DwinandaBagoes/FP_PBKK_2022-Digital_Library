@@ -14,8 +14,8 @@ Untuk melakukan instalasi sistem diharapkan telah menginstal github dan juga tel
 4. Lakukan **CD** (_change directory_) ke dalam direktori yang sudah ke clone, lalu ke src.
 5. Ketikkan **composer update** & **npm install** tunggu hingga proses instalasi selesai untuk setiap masing - masing perintah.
 6. Jika sudah selesai, maka copy _file_ yang bernama **.env.example** pastekan di halaman yang sama lalu ubah namanya menjadi **.env**. Untuk linux hanya perlu mengetikkan perintah **cp .env.example .env**.
-7. Selanjutnya ketikkan **php artisan key:generate**.
+7. Selanjutnya ketikkan **php artisan key:generate**
 8. Jika sukses maka akan muncul tulisan **_successful generate key bla... bla..._**.
-9. Lalu nyalakan **xampp** dan buat database namanya **laravel**, jika sudah ketikkan **php artisan migrate** .
+9. Lalu nyalakan **xampp** dan buat database namanya **laravel**, jika sudah ketikkan **php artisan migrate** 
 10. Jika berhasil ketikkan perintah **php artisan serve** dan akan muncul _response_ _**htttp://localhost:8000/**_.
 11. Selamat sistem telah berhasil **diinstal** :).

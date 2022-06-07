@@ -138,7 +138,7 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link" href="{{ route('admin') }}">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
               Beranda
             </a>

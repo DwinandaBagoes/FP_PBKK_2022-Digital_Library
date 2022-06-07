@@ -12,7 +12,7 @@
                 <h1 class="h2">Buku</h1>
               </div>
               <div class="col-sm-6 float-end">
-                <a href="daftar.html" class="btn btn-primary mb-2 float-end">Tambah baru</a>
+                <a href="{{ route('tambahBuku') }}" class="btn btn-primary mb-2 float-end">Tambah baru</a>
               </div>
             </div>
             
@@ -40,8 +40,8 @@
                   <td>{{ $vk->tahunTerbit }}</td>
                   <td>{{ $vk->fileBuku }}</td>
                   <td>
-                    <button>Edit</button>
-                    <button>Hapus</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" onclick="getDataSiswa(${data.id})">Edit</button>&nbsp;
+                    <button class="btn btn-danger btn-sm" onclick="deleteDataSiswa(${data.id})">Hapus</button>
                   </td>
                 </tr>
                 @empty

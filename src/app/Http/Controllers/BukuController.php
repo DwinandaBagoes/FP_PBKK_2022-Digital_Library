@@ -24,4 +24,23 @@ class BukuController extends Controller
         return view('admin.buku', compact('buku'));
         // return view('admin.buku');
     }
+    public function tambahBuku()
+    {
+        
+        return view('admin.tambahBuku');
+    }
+
+    public function store(Request $request)
+    {
+        $jquin = [
+            'judulBuku' => $request -> judulBuku,
+            'fotoSampul' => $request -> fotoSampul,
+            'pengarang' => $request -> pengarang,
+            'penerbit' => $request -> penerbit,
+            'fileBuku' => $request -> fileBuku,
+            'tahunTerbit' => $request -> tahunTerbit
+        ];
+        Buku::create($jquin);
+        return redirect()->route('buku');
+    }
 }

@@ -138,31 +138,31 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
               Beranda
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('buku') }}">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#collection"/></svg>
               Buku
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('anggota') }}">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
               Anggota
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#{{ route('peminjaman') }}">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
               Peminjaman
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="laporan">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
               Laporan
             </a>

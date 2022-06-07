@@ -15,7 +15,7 @@
                 <a href="daftar.html" class="btn btn-primary mb-2 float-end">Tambah baru</a>
               </div>
             </div>
- 
+            
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -30,7 +30,20 @@
                 </tr>
               </thead>
               <tbody id="listSiswa">
-                 
+                @forelse($buku as $vk)
+                <tr>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $vk->judulBuku }}</td>
+                  <td>{{ $vk->fotoSampul }}</td>
+                  <td>{{ $vk->pengarang }}</td>
+                  <td>{{ $vk->penerbit }}</td>
+                  <td>{{ $vk->tahunTerbit }}</td>
+                  <td>{{ $vk->fileBuku }}</td>
+                  <td>
+                    <button>Edit</button>
+                    <button>Hapus</button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

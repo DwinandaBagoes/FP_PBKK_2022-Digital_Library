@@ -15,7 +15,7 @@
             <a class="nav-link" href="javascript:void(0)">Buku Tamu</a>
             </li>
             <li class="mx-5 nav-item">
-            <a class="nav-link" href="javascript:void(0)">Pustakawan</a>
+            <a class="nav-link" href="{{ route('admin') }}">Pustakawan</a>
             </li>
         </ul>
         <form class="d-flex">

@@ -40,7 +40,9 @@
                   <td>{{ $vk->pengarang }}</td>
                   <td>{{ $vk->penerbit }}</td>
                   <td>{{ $vk->tahunTerbit }}</td>
-                  <td>{{ $vk->fileBuku }}</td>
+                  <td>
+                    <a href="{{ asset('buku/'.$vk->fileBuku) }}" target="_blank">baca {{ $vk->judulBuku }}</a>
+                  </td>
                   <td>
                     <a href="{{ route('editBuku', $vk->id) }}"
                       <button type="button" class="btn btn-primary btn-sm">Edit</button>&nbsp;

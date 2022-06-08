@@ -33,10 +33,18 @@ class BukuController extends Controller
     public function store(Request $request)
     {  
         $data = Buku::create($request->all());
+        
         if($request->hasFile('fotoSampul'))
         {
             $request->file('fotoSampul')->move('img/', $request->file('fotoSampul')->getClientOriginalName());
             $data->fotoSampul = $request->file('fotoSampul')->getClientOriginalName();
+            $data->save();
+        }
+
+        if($request->hasFile('fileBuku'))
+        {
+            $request->file('fileBuku')->move('buku/', $request->file('fileBuku')->getClientOriginalName());
+            $data->fileBuku = $request->file('fileBuku')->getClientOriginalName();
             $data->save();
         }
         return redirect()->route('buku');
@@ -45,6 +53,7 @@ class BukuController extends Controller
     public function hapusBuku(Buku $buku)
     {
         unlink('img/'. $buku->fotoSampul);
+        unlink('buku/'. $buku->fileBuku);
         $buku-> delete();
         return redirect()->back();
     }
@@ -57,11 +66,20 @@ class BukuController extends Controller
     public function updateBuku(Buku $buku, Request $request)
     {
         unlink('img/'. $buku->fotoSampul);
+        unlink('buku/'. $buku->fileBuku);
+
         if($request->hasFile('fotoSampul'))
         {
             $request->file('fotoSampul')->move('img/', $request->file('fotoSampul')->getClientOriginalName());
             $request->fotoSampul = $request->file('fotoSampul')->getClientOriginalName();
         }
+
+        if($request->hasFile('fileBuku'))
+        {
+            $request->file('fileBuku')->move('buku/', $request->file('fileBuku')->getClientOriginalName());
+            $request->fileBuku = $request->file('fileBuku')->getClientOriginalName();
+        }
+
         $jquin = [
             'judulBuku' => $request -> judulBuku,
             'fotoSampul' => $request -> fotoSampul,

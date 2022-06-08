@@ -34,7 +34,9 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $vk->judulBuku }}</td>
-                  <td>{{ $vk->fotoSampul }}</td>
+                  <td>
+                    <img src="{{ asset('img/'.$vk->fotoSampul) }}" style="width: 100px;">
+                  </td>
                   <td>{{ $vk->pengarang }}</td>
                   <td>{{ $vk->penerbit }}</td>
                   <td>{{ $vk->tahunTerbit }}</td>
@@ -44,7 +46,7 @@
                       <button type="button" class="btn btn-primary btn-sm">Edit</button>&nbsp;
                     </a>
                     <a href="{{ route('hapusBuku', $vk->id) }}"
-                      <button class="btn btn-danger btn-sm" onclick="return confirm('Hapus data {{ $vk->judulBuku }}')">Hapus</button>
+                      <button class="btn btn-danger btn-sm" onclick="return confirm('Hapus buku {{ $vk->judulBuku }}')">Hapus</button>
                     </a>
                     </td>
                 </tr>
@@ -59,49 +61,6 @@
       </div>
   </div>
  
-  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editModalLabel">Edit Data Buku</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="form-edit">
-          <div class="modal-body">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="judul" id="judul" placeholder="Judul Buku" required>
-              <label for="judul">Judul Buku</label>
-            </div>
-            <div class="mb-3">
-              <label for="sampul" class="form-label">Foto Sampul</label>
-              <input class="form-control" type="file" name="sampul" id="sampul" accept=".png, .jpg, .jpeg">
-              <img src="" style="max-height: 100px; width: auto" id="previewImg">
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="pengarang" id="pengarang" placeholder="Pengarang" required>
-              <label for="pengarang">Pengarang</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="penerbit" id="penerbit" placeholder="Penerbit" required>
-              <label for="penerbit">Penerbit</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="tahun_terbit" id="tahun_terbit" placeholder="Tahun Terbit" required>
-              <label for="tahun_terbit">Tahun Terbit</label>
-            </div>
-            <div class="mb-3">
-              <label for="file" class="form-label">File</label>
-              <input class="form-control" type="file" name="file" id="file" accept=".pdf">
-              <img src="" style="max-height: 100px; width: auto" id="previewImg">
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-primary" id="edit-btn">Simpan</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  
 </main>
 @endsection

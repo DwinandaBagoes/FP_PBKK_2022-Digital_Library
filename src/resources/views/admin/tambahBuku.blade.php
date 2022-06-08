@@ -18,7 +18,7 @@
       </div>
   </div>
  
-  <form id="form-daftar" method="POST" action="{{ route('storeBook') }}">
+  <form id="form-daftar" method="POST" action="{{ route('storeBook') }}" enctype="multipart/form-data">
       @csrf
       <div class="form-floating mb-3">
         <input type="text" class="form-control" name="judulBuku" id="judulBuku" placeholder="Judul Buku" required>

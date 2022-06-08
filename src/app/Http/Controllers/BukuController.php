@@ -31,21 +31,20 @@ class BukuController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $jquin = [
-            'judulBuku' => $request -> judulBuku,
-            'fotoSampul' => $request -> fotoSampul,
-            'pengarang' => $request -> pengarang,
-            'penerbit' => $request -> penerbit,
-            'fileBuku' => $request -> fileBuku,
-            'tahunTerbit' => $request -> tahunTerbit
-        ];
-        Buku::create($jquin);
+    {  
+        $data = Buku::create($request->all());
+        if($request->hasFile('fotoSampul'))
+        {
+            $request->file('fotoSampul')->move('img/', $request->file('fotoSampul')->getClientOriginalName());
+            $data->fotoSampul = $request->file('fotoSampul')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('buku');
     }
 
     public function hapusBuku(Buku $buku)
     {
+        unlink('img/'. $buku->fotoSampul);
         $buku-> delete();
         return redirect()->back();
     }

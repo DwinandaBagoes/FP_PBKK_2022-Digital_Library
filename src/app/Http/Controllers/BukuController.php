@@ -56,6 +56,12 @@ class BukuController extends Controller
 
     public function updateBuku(Buku $buku, Request $request)
     {
+        unlink('img/'. $buku->fotoSampul);
+        if($request->hasFile('fotoSampul'))
+        {
+            $request->file('fotoSampul')->move('img/', $request->file('fotoSampul')->getClientOriginalName());
+            $request->fotoSampul = $request->file('fotoSampul')->getClientOriginalName();
+        }
         $jquin = [
             'judulBuku' => $request -> judulBuku,
             'fotoSampul' => $request -> fotoSampul,
@@ -64,7 +70,7 @@ class BukuController extends Controller
             'fileBuku' => $request -> fileBuku,
             'tahunTerbit' => $request -> tahunTerbit
         ];
-        $buku->update($jquin);
+        $data = $buku->update($jquin);
         return redirect()->route('buku');
     }
 }

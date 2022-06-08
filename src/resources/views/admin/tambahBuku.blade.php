@@ -45,7 +45,7 @@
         <label for="fileBuku" class="form-label">File Buku</label>
         <input class="form-control" type="file" name="fileBuku" id="fileBuku" accept=".pdf" required>
       </div>
-      <button id="submit-btn" type="submit" class="btn btn-primary w-100 pt-2 btn-block">Daftar</input>
+      <button id="submit-btn" type="submit" class="btn btn-primary w-100 pt-2 btn-block">Tambah</input>
     </form>
 </main>
 @endsection

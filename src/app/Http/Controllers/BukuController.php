@@ -52,10 +52,10 @@ class BukuController extends Controller
 
     public function editBuku(Buku $buku)
     {
-        return view('editBuku', compact('buku'));
+        return view('admin.editBuku', compact('buku'));
     }
 
-    public function updateBuku(Request $request, Buku $buku)
+    public function updateBuku(Buku $buku, Request $request)
     {
         $jquin = [
             'judulBuku' => $request -> judulBuku,

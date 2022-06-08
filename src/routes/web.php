@@ -29,4 +29,4 @@ Route::get('/admin/{buku}/hapusBuku', [App\Http\Controllers\BukuController::clas
 Route::get('/admin/{buku}/editBuku', [App\Http\Controllers\BukuController::class, 'editBuku'])->name('editBuku');
 
 Route::post('/admin/storeBook', [App\Http\Controllers\BukuController::class, 'store'])->name('storeBook');
-Route::post('/admin/updateBuku', [App\Http\Controllers\BukuController::class, 'update'])->name('updateBUku');
+Route::post('/admin/{buku}/updateBuku', [App\Http\Controllers\BukuController::class, 'updateBuku'])->name('updateBuku');

@@ -18,7 +18,7 @@
       </div>
   </div>
  
-  <form id="form-edit" method="POST" action="{{ route('updateBuku') }}">
+  <form id="form-edit" method="POST" action="{{ route('updateBuku', $buku->id) }}">
       @csrf
       <div class="form-floating mb-3">
         <input type="text" class="form-control" name="judulBuku" id="judulBuku" placeholder="Judul Buku" required>
@@ -45,7 +45,7 @@
         <label for="fileBuku" class="form-label">File Buku</label>
         <input class="form-control" type="file" name="fileBuku" id="fileBuku" accept=".pdf" required>
       </div>
-      <button id="submit-btn" type="submit" class="btn btn-primary w-100 pt-2 btn-block">Daftar</input>
+      <button id="submit-btn" type="submit" class="btn btn-primary w-100 pt-2 btn-block">Simpan</input>
     </form>
 </main>
 @endsection

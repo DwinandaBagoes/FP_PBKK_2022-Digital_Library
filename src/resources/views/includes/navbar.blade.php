@@ -1,6 +1,6 @@
 <nav class="mx-5 my-5 navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" >
+        <a class="navbar-brand" href="{{ route('dashboard') }}">
             <img src="{{ asset('img/logo-new.png') }}"  width="280" height="100">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">

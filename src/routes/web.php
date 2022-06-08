@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/listBuku', [App\Http\Controllers\DashboardController::class, 'listBuku'])->name('listBuku');
+
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 Route::get('/admin/buku', [App\Http\Controllers\BukuController::class, 'buku'])->name('buku');
 Route::get('/admin/tambahBuku', [App\Http\Controllers\BukuController::class, 'tambahBuku'])->name('tambahBuku');

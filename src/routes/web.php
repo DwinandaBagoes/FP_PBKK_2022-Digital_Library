@@ -25,5 +25,8 @@ Route::get('/admin/tambahBuku', [App\Http\Controllers\BukuController::class, 'ta
 Route::get('/admin/anggota', [App\Http\Controllers\AdminController::class, 'anggota'])->name('anggota');
 Route::get('/admin/peminjaman', [App\Http\Controllers\AdminController::class, 'peminjaman'])->name('peminjaman');
 Route::get('/admin/laporan', [App\Http\Controllers\AdminController::class, 'laporan'])->name('laporan');
+Route::get('/admin/{buku}/hapusBuku', [App\Http\Controllers\BukuController::class, 'hapusBuku'])->name('hapusBuku');
+Route::get('/admin/{buku}/editBuku', [App\Http\Controllers\BukuController::class, 'editBuku'])->name('editBuku');
 
 Route::post('/admin/storeBook', [App\Http\Controllers\BukuController::class, 'store'])->name('storeBook');
+Route::post('/admin/updateBuku', [App\Http\Controllers\BukuController::class, 'update'])->name('updateBUku');

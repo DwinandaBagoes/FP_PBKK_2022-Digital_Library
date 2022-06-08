@@ -40,9 +40,13 @@
                   <td>{{ $vk->tahunTerbit }}</td>
                   <td>{{ $vk->fileBuku }}</td>
                   <td>
-                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" onclick="getDataSiswa(${data.id})">Edit</button>&nbsp;
-                    <button class="btn btn-danger btn-sm" onclick="deleteDataSiswa(${data.id})">Hapus</button>
-                  </td>
+                    <a href="{{ route('editBuku', $vk->id) }}"
+                      <button type="button" class="btn btn-primary btn-sm">Edit</button>&nbsp;
+                    </a>
+                    <a href="{{ route('hapusBuku', $vk->id) }}"
+                      <button class="btn btn-danger btn-sm" onclick="return confirm('Hapus data {{ $vk->judulBuku }}')">Hapus</button>
+                    </a>
+                    </td>
                 </tr>
                 @empty
                 <tr>

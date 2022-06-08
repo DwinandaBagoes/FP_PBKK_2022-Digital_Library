@@ -43,4 +43,29 @@ class BukuController extends Controller
         Buku::create($jquin);
         return redirect()->route('buku');
     }
+
+    public function hapusBuku(Buku $buku)
+    {
+        $buku-> delete();
+        return redirect()->back();
+    }
+
+    public function editBuku(Buku $buku)
+    {
+        return view('editBuku', compact('buku'));
+    }
+
+    public function updateBuku(Request $request, Buku $buku)
+    {
+        $jquin = [
+            'judulBuku' => $request -> judulBuku,
+            'fotoSampul' => $request -> fotoSampul,
+            'pengarang' => $request -> pengarang,
+            'penerbit' => $request -> penerbit,
+            'fileBuku' => $request -> fileBuku,
+            'tahunTerbit' => $request -> tahunTerbit
+        ];
+        $buku->update($jquin);
+        return redirect()->route('buku');
+    }
 }

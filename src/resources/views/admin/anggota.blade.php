@@ -34,7 +34,7 @@
                   <td>{{ $vk->namaAnggota }}</td>
                   <td>{{ $vk->jenisKelamin }}</td>
                   <td>{{ $vk->noTelp }}</td>
-                  <td>{{ $vk->Alamat }}</td>
+                  <td>{{ $vk->alamat }}</td>
                   <td>
                     <a href="{{ route('editAnggota', $vk->id) }}"
                       <button type="button" class="btn btn-primary btn-sm">Edit</button>&nbsp;

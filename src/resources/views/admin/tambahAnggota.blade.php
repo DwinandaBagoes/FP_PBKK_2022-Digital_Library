@@ -24,9 +24,13 @@
         <input type="text" class="form-control" name="namaAnggota" id="namaAnggota" placeholder="nama Anggota" required>
         <label for="nama">Nama Anggota</label>
       </div>
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="jenisKelamin" id="jenisKelamin" placeholder="Jenis Kelamin" required>
-        <label for="jenisKelamin">Jenis Kelamin</label>
+      <div class="col-md-6">
+          <label for="jenisKelamin">Jenis Kelamin</label>
+          <select class="form-select form-floating mb-3" name="jenisKelamin" id="jenisKelamin" required>
+            <option label="Pilih jenis kelamin" hidden></option>
+            <option value="L">Laki-Laki</option>
+            <option value="P">Perempuan</option>
+          </select>
       </div>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" name="noTelp" id="noTelp" placeholder="No Telp" required>

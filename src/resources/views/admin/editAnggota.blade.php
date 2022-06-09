@@ -21,19 +21,23 @@
   <form id="form-edit" method="POST" action="{{ route('updateAnggota', $anggota->id) }}" enctype="multipart/form-data">
       @csrf
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="namaAnggota" id="namaAnggota" placeholder="nama Anggota" required>
+        <input type="text" class="form-control" name="namaAnggota" id="namaAnggota" placeholder="nama Anggota" value="<?php echo $anggota->namaAnggota; ?>" required>
         <label for="nama">Nama Anggota</label>
       </div>
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="jenisKelamin" id="jenisKelamin" placeholder="Jenis Kelamin" required>
-        <label for="jenisKelamin">Jenis Kelamin</label>
+      <div class="col-md-6">
+          <label for="jenisKelamin">Jenis Kelamin</label>
+          <select class="form-select form-floating mb-3" name="jenisKelamin" id="jenisKelamin" required>
+            <option label="Pilih jenis kelamin" hidden></option>
+            <option value="L">Laki-Laki</option>
+            <option value="P">Perempuan</option>
+          </select>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="noTelp" id="noTelp" placeholder="No Telp" required>
+        <input type="text" class="form-control" name="noTelp" id="noTelp" placeholder="No Telp" value="<?php echo $anggota->noTelp; ?>" required>
         <label for="noTelp">No Telp</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" placeholder="Alamat" name="alamat" id="alamat" required>
+        <input type="text" class="form-control" placeholder="Alamat" name="alamat" id="alamat" value="<?php echo $anggota->alamat; ?>" required>
         <label for="alamat">Alamat</label>
       </div>
       <button id="submit-btn" type="submit" class="btn btn-primary w-100 pt-2 btn-block">Simpan</input>

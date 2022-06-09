@@ -21,7 +21,7 @@
   <form id="form-edit" method="POST" action="{{ route('updateBuku', $buku->id) }}" enctype="multipart/form-data">
       @csrf
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="judulBuku" id="judulBuku" placeholder="Judul Buku" required>
+        <input type="text" class="form-control" name="judulBuku" id="judulBuku" placeholder="Judul Buku" value="<?php echo $buku->judulBuku; ?>" required>
         <label for="judul">Judul Buku</label>
       </div>
       <div class="mb-3">
@@ -30,15 +30,15 @@
         <img src="" style="max-height: 100px; width: auto" id="previewImg">
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="pengarang" id="pengarang" placeholder="Pengarang Buku" required>
+        <input type="text" class="form-control" name="pengarang" id="pengarang" placeholder="Pengarang Buku" value="<?php echo $buku->pengarang; ?>" required>
         <label for="pengarang">Pengarang</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" name="penerbit" id="penerbit" placeholder="Penerbit Buku" required>
+        <input type="text" class="form-control" name="penerbit" id="penerbit" placeholder="Penerbit Buku" value="<?php echo $buku->penerbit; ?>" required>
         <label for="penerbit">Penerbit</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="number" class="form-control" placeholder="Tahun Terbit Buku" name="tahunTerbit" id="tahunTerbit" required>
+        <input type="number" class="form-control" placeholder="Tahun Terbit Buku" name="tahunTerbit" id="tahunTerbit" value=<?php echo $buku->tahunTerbit; ?> required>
         <label for="tahun">Tahun Terbit</label>
       </div>
       <div class="mb-3">

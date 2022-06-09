@@ -22,11 +22,6 @@ class AdminController extends Controller
         return view('admin.beranda');
     }
 
-    public function anggota()
-    {
-        return view('admin.anggota');
-    }
-
     public function peminjaman()
     {
         return view('admin.peminjaman');

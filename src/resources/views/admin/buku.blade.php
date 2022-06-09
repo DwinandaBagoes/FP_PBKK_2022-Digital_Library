@@ -29,7 +29,7 @@
                   <th scope="col">Aksi</th>
                 </tr>
               </thead>
-              <tbody id="listSiswa">
+              <tbody id="listBuku">
                 @forelse($buku as $vk)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
@@ -59,11 +59,9 @@
                 @endforelse
               </tbody>
             </table>
-            
+
           </div>
       </div>
   </div>
- 
-  
 </main>
 @endsection
